@@ -37,11 +37,11 @@ def send_request(url):
     print(f"Response from {url}: {response.status_code}")
 
 # Local host URL to send requests to
-base_url = "http://localhost:3000/"
+base_url = "http://localhost:8000/"
 
 # Generate a list of 1000 URLs
-urls = [f"{base_url}" for i in range(1, 5000)]
+urls = [f"{base_url}" for i in range(1, 30000)]
 
-# Use ThreadPoolExecutor to send 1000 requests simultaneously
+# Use ThreadPoolExecutor to send 10000 requests simultaneously
 with ThreadPoolExecutor() as executor:
     executor.map(send_request, urls)

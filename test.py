@@ -16,8 +16,8 @@ def generate_data():
     time_diff_seconds = (end_datetime - start_datetime).total_seconds()
     random_seconds = randint(0, int(time_diff_seconds))
     random_timestamp = start_datetime + timedelta(seconds=random_seconds)
-    timestamp = random_timestamp.isoformat() + "Z"
-
+    timestamp = random_timestamp.isoformat() + "Z"    
+    
     data = {
         "level": "error",
         "message": "Failed to connect to DB",
